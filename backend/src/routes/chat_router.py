@@ -48,7 +48,7 @@ async def upload_pdf(file: UploadFile = File(...)):
         await file.close()
     return {"message": "PDF uploaded successfully and vector store created"}
 
-@router.post("/chat")
+@router.post("")
 async def query_pdf(question: Query):
     """Takes a user question and returns an answer based on the uploaded PDF"""
     model = llm.model

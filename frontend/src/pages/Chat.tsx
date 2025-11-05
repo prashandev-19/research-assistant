@@ -96,7 +96,6 @@ const Chat = () => {
           console.log(err);
         },
         onSuccess: async (reader) => {
-          // Guard against undefined reader
           if (!reader) {
             setQuery("");
             return;
